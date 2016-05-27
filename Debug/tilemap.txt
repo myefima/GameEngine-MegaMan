@@ -1,0 +1,49 @@
+night_background 0 143 0 0 0 0 0 
+night_background_quarter 511 143 0 0 0 0 0
+night_background_right 580 143 0 0 0 0 0 
+night_background_quarter 836 143 0 0 0 0 0
+night_background_right 900 143 0 0 0 0 0
+night_background_quarter 1156 143 0 0 0 0 0
+
+left_wall -31 230 0 0 1 0 0 
+tower 0 192 0 0 0 0 0
+icy_brick 0 352 0 0 1 0 0
+icy_brick_right_ledge 230 352 0 0 1 0 0
+right_ledge_ice 230 323 0 0 0 0 0
+icy_brick_left_ledge 378 352 0 0 1 0 0
+icy_brick 428 352 0 0 1 0 0
+far_lamppost_green 390 270 0 0 0 0 0
+right_ledge_ice 386 323 0 0 0 0 0
+right_ledge_ice 430 323 0 0 0 0 0
+railing_left 505 329 0 0 0 0 0
+railing_right 617 329 0 0 0 0 0
+icy_brick_right_ledge 620 352 0 0 1 0 0
+
+spikes 681 383 0 0 1 0 0
+spikes 698 383 0 0 1 0 0
+
+far_lamppost_green 760 252 0 0 0 0 0
+high_ledge_left 732 322 0 0 1 0 0
+high_ledge_left_railing 732 296 0 0 0 0 0
+railing_right 782 299 0 0 0 0 0
+icy_brick 800 322 0 0 1 0 0
+icy_brick_right_ledge 1030 322 0 0 1 0 0
+tower 888 162 0 0 0 0 0
+extra_brick 732 368 0 0 1 0 0
+extra_brick 800 368 0 0 1 0 0
+extra_brick 900 368 0 0 1 0 0
+extra_brick 974 368 0 0 1 0 0
+
+cave_entrance_ice 1200 228 0 0 0 0 0
+cave_entrance_wall 1217 324 0 0 0 0 0
+cave_entrance_wall 1217 292 0 0 0 0 0
+cave_entrance_wall 1217 260 0 0 0 0 0
+cave_entrance_wall 1217 228 0 0 0 0 0
+cave_entrance_inner_wall 1255 229 0 0 0 0 0
+cave_entrance_ceiling_left 1200 180 0 0 1 0 0
+extra_brick 1200 152 0 0 1 0 0
+extra_brick 1200 123 0 0 1 0 0
+icy_brick 1180 352 0 0 1 0 0
+icy_brick_left_ledge 1140 352 0 0 1 0 0
+
+ice_slope_down_right_1 1409 352 59 30 1 0 0

@@ -1,0 +1,8 @@
+close_lamppost_green 110 226 0 0 0 0 0
+close_lamppost_green 450 226 0 0 0 0 0
+close_lamppost_green 850 194 0 0 0 0 0
+
+steel_beam 1170 325 0 0 0 0 0
+steel_beam 1170 256 0 0 0 0 0
+steel_beam 1170 229 0 0 0 0 0
+steel_beam_top 1136 148 0 0 1 0 0

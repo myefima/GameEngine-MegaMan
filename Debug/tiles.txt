@@ -1,0 +1,27 @@
+night_background 2 2 512 257
+night_background_quarter 2 2 126 257
+night_background_right 256 2 256 257
+
+left_wall 17 544 34 144
+icy_brick 25 485 230 47
+icy_brick_right_ledge 317 511 65 70
+right_ledge_ice 317 481 65 29
+icy_brick_left_ledge 777 1003 63 63
+ice_slope_down_right_1 385 496 66 64
+high_ledge_left 304 386 76 62
+high_ledge_left_railing 304 359 76 26
+spikes 552 580 32 16
+railing_right 323 455 65 23
+railing_left 209 455 113 23 
+tower 24 318 129 160
+far_lamppost_green 166 384 25 70
+far_lamppost_blue 213 378 25 70
+close_lamppost_green 416 294 42 170
+extra_brick 51 657 120 30
+
+steel_beam 772 514 31 76
+steel_beam_top 848 428 65 86
+cave_entrance_wall 870 529 46 40
+cave_entrance_ice 854 529 26 15
+cave_entrance_inner_wall 767 599 60 128
+cave_entrance_ceiling_left 60 555 63 50
