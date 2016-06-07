@@ -6,7 +6,9 @@
 #include "Camera.h"
 #include "Scene.h"
 #include "EventQueue.h"
+#include "GameObject.h"
 #include <vector>
+#include <queue>
 
 namespace GE161
 {
@@ -56,11 +58,18 @@ namespace GE161
 		static void sendEvent(int eventType);
 
 		void addGameObject(GameObject* gameObject);
+		void addPending();
+		void removeGameObject(GameObject* gameObject);
+		void removePending();
+		
 		std::vector<GameObject*> gameObjects;
+		std::vector<GameObject*> pendingObjects;
+		std::vector<GameObject*> pendingRemoval;
+		void setController();
 
 	private:
 		SDL_Renderer* getRenderer();
-
+		SDL_GameController* gameController;
 
 		Window* window_;
 		Camera* camera_;

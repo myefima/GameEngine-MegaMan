@@ -8,4 +8,5 @@ class BGMusic : public GE161::GameObject{
 public:
 	BGMusic(std::string filename);
 	void update();
+	void destroy();
 };

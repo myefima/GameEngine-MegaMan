@@ -25,3 +25,6 @@ cave_entrance_wall 870 529 46 40
 cave_entrance_ice 854 529 26 15
 cave_entrance_inner_wall 767 599 60 128
 cave_entrance_ceiling_left 60 555 63 50
+cave_animated_wall 519 36 257 222
+cave_animated_wall 778 36 257 222
+cave_animated_wall 1037 36 257 222

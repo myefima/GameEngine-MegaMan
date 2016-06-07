@@ -21,3 +21,7 @@ void GE161::Component::setGameObject(GE161::GameObject* gameObject){
 GE161::GameObject* GE161::Component::GameObject(){
 	return g;
 }
+
+void GE161::Component::destroy(){
+
+}

@@ -6,13 +6,14 @@
 #include "Scene.h"
 #include "GameObject.h"
 #include "MegaMan.h"
+#include "Enemy.h"
 #include "BGMusic.h"
 #include "Event.h"
 #include "SDL_mixer.h"
 #include "Audio.h"
 #include "Camera.h"
 #include "TileMap.h"
-
+#include <vector>
 class MegaManGamePlayScene : public GE161::Scene
 {
 public:
@@ -28,6 +29,8 @@ public:
 private:
 	MegaManGame* theGame;
 	MegaMan* megaMan;
+	std::vector<Enemy*> enemies;
+
 	BGMusic* music;
 
 	int frameWidth_;

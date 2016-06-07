@@ -10,3 +10,7 @@ void BGMusic::update(){
 	if (song)
 		song->~Audio();
 }
+
+void BGMusic::destroy(){
+
+}

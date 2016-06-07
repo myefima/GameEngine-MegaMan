@@ -26,3 +26,7 @@ GE161::Tile::Tile(std::string tileName,int worldX, int worldY, int width, int he
 GE161::Tile::~Tile(){
 
 }
+
+void GE161::Tile::destroy(){
+
+}

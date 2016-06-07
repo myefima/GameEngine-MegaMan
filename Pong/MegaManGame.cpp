@@ -13,7 +13,8 @@ void MegaManGame::setup()
 {
 	window()->size(500, 250);
 	window()->title("MegaMan");
-
+	camera()->setX(0);
+	camera()->setY(0);
 	theGame->setFrameRate(30);
 
 	//addScene("Instructions", new PongInstructionsScene(this));

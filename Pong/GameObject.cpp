@@ -39,7 +39,7 @@ int GE161::GameObject::getY()
 	return y_;
 }
 
-void GE161::GameObject::draw(int frameIndex)
+void GE161::GameObject::draw(int frameIndex, bool flip)
 {
 	Sprite* sprite_ = (GE161::Sprite*) getComponent("Sprite");
 
@@ -53,7 +53,9 @@ void GE161::GameObject::draw(int frameIndex)
 		sprite_->frames[frameIndex].width, sprite_->frames[frameIndex].height};
 
 	SDL_Rect destrect = { x_ - GE161::Game::theGame->camera()->getX(), y_ - GE161::Game::theGame->camera()->getY(), sprite_->frameWidth_, sprite_->frameHeight_ };
-	int success = SDL_RenderCopy(GE161::Game::theGame->getRenderer(), sprite_->frames[frameIndex].texture, &srcrect, &destrect);
+	//int success = SDL_RenderCopy(GE161::Game::theGame->getRenderer(), sprite_->frames[frameIndex].texture, &srcrect, &destrect);
+	int success = flip ? SDL_RenderCopyEx(GE161::Game::theGame->getRenderer(), sprite_->frames[frameIndex].texture, &srcrect, &destrect, 0, nullptr, SDL_FLIP_HORIZONTAL)
+		: SDL_RenderCopy(GE161::Game::theGame->getRenderer(), sprite_->frames[frameIndex].texture, &srcrect, &destrect);
 	if (success != 0)
 	{
 		fatalSDLError("In GameObject::draw, SDL_RenderCopy: ", SDL_GetError());
@@ -61,11 +63,11 @@ void GE161::GameObject::draw(int frameIndex)
 
 }
 
-void GE161::GameObject::draw(std::string sequenceName)
+void GE161::GameObject::draw(std::string sequenceName, bool flip)
 {
 	Sprite* sprite_ = (GE161::Sprite*) getComponent("Sprite");
 
-	draw(sprite_->getNextFrameIndex(sequenceName));
+	draw(sprite_->getNextFrameIndex(sequenceName), flip);
 }
 
 
@@ -130,4 +132,16 @@ std::vector<GE161::Component*> GE161::GameObject::getComponentsWithID(std::strin
 			answer.push_back(c);
 
 	return answer;
+}
+
+void GE161::GameObject::onCollisionEnter(GameObject& otherGameObject){
+	debugOut("in base collision enter");
+}
+
+void GE161::GameObject::destroy(){
+
+}
+
+void GE161::GameObject::afterDestroy(){
+
 }

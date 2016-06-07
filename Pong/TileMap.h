@@ -24,7 +24,8 @@ namespace GE161 {
 		//draw the tiles in update
 		void drawTiles();
 		void update();
-		
+		void destroy();
+
 		std::vector<Tile*> tiles;
 
 	private:

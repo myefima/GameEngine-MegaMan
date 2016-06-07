@@ -135,3 +135,7 @@ void GE161::TileMap::drawTiles(){
 void GE161::TileMap::update(){
 	drawTiles();
 }
+
+void GE161::TileMap::destroy(){
+
+}

@@ -14,8 +14,11 @@
     <ClCompile Include="Audio.cpp" />
     <ClCompile Include="BGMusic.cpp" />
     <ClCompile Include="BoxCollider.cpp" />
+    <ClCompile Include="BusterShot.cpp" />
     <ClCompile Include="Camera.cpp" />
     <ClCompile Include="Component.cpp" />
+    <ClCompile Include="DrillShot.cpp" />
+    <ClCompile Include="Enemy.cpp" />
     <ClCompile Include="Event.cpp" />
     <ClCompile Include="EventListener.cpp" />
     <ClCompile Include="EventQueue.cpp" />
@@ -38,8 +41,11 @@
     <ClInclude Include="Audio.h" />
     <ClInclude Include="BGMusic.h" />
     <ClInclude Include="BoxCollider.h" />
+    <ClInclude Include="BusterShot.h" />
     <ClInclude Include="Camera.h" />
     <ClInclude Include="Component.h" />
+    <ClInclude Include="DrillShot.h" />
+    <ClInclude Include="Enemy.h" />
     <ClInclude Include="Event.h" />
     <ClInclude Include="EventListener.h" />
     <ClInclude Include="EventQueue.h" />

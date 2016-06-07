@@ -185,6 +185,35 @@ void GE161::Game::sendEvent(int eventType){
 }
 
 void GE161::Game::addGameObject(GameObject* gameObject){
-	gameObjects.emplace(gameObjects.begin(), gameObject);
+	//gameObjects.emplace(gameObjects.begin(), gameObject);
+	pendingObjects.emplace(pendingObjects.begin(), gameObject);
 }
 
+void GE161::Game::addPending(){
+	while (pendingObjects.size() > 0){
+		gameObjects.emplace_back(pendingObjects.front());
+		pendingObjects.erase(pendingObjects.begin());
+	}
+}
+
+void GE161::Game::removeGameObject(GameObject* gameObject){
+	pendingRemoval.emplace_back(gameObject);
+}
+
+void GE161::Game::removePending(){
+	for (GE161::GameObject* g : pendingRemoval)
+		for (std::vector<GameObject*>::iterator it = gameObjects.begin(); it != gameObjects.end(); ++it){
+			if (*it == g){
+				gameObjects.erase(it);
+				g->afterDestroy();
+				break;
+			}
+		}
+	pendingRemoval.clear();
+}
+
+void GE161::Game::setController(){
+	gameController = SDL_GameControllerOpen(0);
+	if (!gameController)
+		debugOut("Unable to open controller");
+}

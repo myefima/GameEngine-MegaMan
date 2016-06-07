@@ -81,6 +81,15 @@
     <ClCompile Include="MegaManGame.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="BusterShot.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Enemy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DrillShot.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GE161int.h">
@@ -144,6 +153,15 @@
       <Filter>Source Files</Filter>
     </ClInclude>
     <ClInclude Include="MegaManGame.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BusterShot.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Enemy.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DrillShot.h">
       <Filter>Source Files</Filter>
     </ClInclude>
   </ItemGroup>

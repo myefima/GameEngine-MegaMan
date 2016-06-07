@@ -10,6 +10,7 @@ namespace GE161{
 		Tile(std::string tileName, int worldX, int worldY, int width, int height, 
 			int left, int right, bool collides = false, int colliderLeftOffset = 0, int colliderTopOffset = 0);
 		~Tile();
+		void destroy();
 		int leftHeight, rightHeight;
 	private:
 		bool hasCollider_;

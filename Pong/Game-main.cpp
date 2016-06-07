@@ -19,6 +19,12 @@ void GE161::Game::main(int x)
 		return;
 	}
 
+	if (SDL_NumJoysticks() < 1)
+		debugOut("No joysticks connected.");
+	else {
+		setController();
+	}
+
 	//Initialize SDL_mixer
 	if (Mix_OpenAudio(16000, MIX_DEFAULT_FORMAT, 2, 4096) == -1)
 	{
@@ -29,7 +35,7 @@ void GE161::Game::main(int x)
 
 	// Invoke the game's overridden setup() method, and create the SDL window.
 	window_ = new GE161::Window();
-	camera_ = new GE161::Camera(0, 0, window_->clientWidth(), window_->clientHeight());
+	theGame->camera_ = new GE161::Camera(0, 0, window_->clientWidth(), window_->clientHeight());
 	setup();
 	window_->initialize();
 	window_->clearBackground();
@@ -47,6 +53,8 @@ void GE161::Game::main(int x)
 		sceneName = GE161::Game::theGame->chooseScene(sceneName, returnCode);
 		GE161::Scene* scene = GE161::Game::theGame->lookUpScene(sceneName);
 		
+		//GE161::Game::addPending();
+
 		// Now we have the scene to use.  First, run its setup().
 		bool success = scene->setup();
 		if (!success)
@@ -66,6 +74,9 @@ void GE161::Game::main(int x)
 		// Loop through the inner while loop once per frame in scene.
 		while (returnCode == CONTINUE_SCENE)
 		{
+
+			GE161::Game::addPending();
+
 			int startTime = getTicks();
 			int secondTimer = startTime;
 			eventQueue_->getSDLEvents();
@@ -73,9 +84,23 @@ void GE161::Game::main(int x)
 
 			window_->clearBackground();
 			returnCode = scene->draw();
+
+
 			for (GE161::GameObject* g : theGame->gameObjects){
 				g->update();
 			}
+
+			for (GE161::GameObject* g : theGame->gameObjects){
+				for (GE161::GameObject* o : theGame->gameObjects){
+					if (g == o) continue;
+					else if (g->overlapsWith(*o)) {
+						g->onCollisionEnter(*o);
+					}
+				}
+			}
+
+			removePending();
+
 			window_->drawToScreen();
 
 			delay(startTime + MS_PER_FRAME - getTicks());

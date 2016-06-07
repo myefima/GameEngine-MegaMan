@@ -12,6 +12,7 @@ namespace GE161{
 		GE161::GameObject* g;
 	public:
 		Component();
+		void destroy();
 		void setID(std::string id);
 		std::string getID();
 		void setGameObject(GE161::GameObject* gameObject);

@@ -3,6 +3,7 @@
 #include <string>
 #include <map>
 #include <vector>
+#include <typeinfo>
 #include "GameObjectStdfx.h"
 
 namespace GE161
@@ -10,9 +11,9 @@ namespace GE161
 	class GameObject
 	{
 	public:
-
+		friend class Game;
 		friend class Component;
-
+		friend class Texty;
 		GameObject(int startingX = 0, int startingY = 0);
 		~GameObject();
 
@@ -21,11 +22,14 @@ namespace GE161
 		void moveY(int delta);
 		int getX();
 		int getY();
-		void draw(int frameIndex);
-		void draw(std::string sequenceName);
+		void draw(int frameIndex, bool flip = false);
+		void draw(std::string sequenceName, bool flip = false);
 		bool overlapsWith(GameObject& otherGameObject);
 		virtual void update();
-		GE161::Texty* text();
+		virtual void onCollisionEnter(GameObject& otherGameObject);
+		virtual void destroy();
+		virtual void afterDestroy();
+		Texty* text();
 
 
 		GE161::Component* getComponent(std::string componentType); //returns first component of type

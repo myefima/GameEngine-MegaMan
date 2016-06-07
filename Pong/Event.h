@@ -27,6 +27,8 @@ namespace GE161
 		static const int QUIT = SDL_QUIT;
 		static const int KEY_DOWN = SDL_KEYDOWN;
 		static const int KEY_UP = SDL_KEYUP;
+		static const int CONTROLLER_DOWN = SDL_CONTROLLERBUTTONDOWN;
+		static const int CONTROLLER_UP = SDL_CONTROLLERBUTTONUP;
 		static const int MOUSE_MOTION = SDL_MOUSEMOTION; 
 		static const int MOUSE_BUTTONDOWN = SDL_MOUSEBUTTONDOWN;
 		static const int MOUSE_BUTTONUP = SDL_MOUSEBUTTONUP;

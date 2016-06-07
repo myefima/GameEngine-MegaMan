@@ -35,15 +35,24 @@ extra_brick 900 368 0 0 1 0 0
 extra_brick 974 368 0 0 1 0 0
 
 cave_entrance_ice 1200 228 0 0 0 0 0
+cave_animated_wall 1300 144 0 0 0 0 0
+cave_animated_wall 1556 144 0 0 0 0 0
 cave_entrance_wall 1217 324 0 0 0 0 0
 cave_entrance_wall 1217 292 0 0 0 0 0
 cave_entrance_wall 1217 260 0 0 0 0 0
 cave_entrance_wall 1217 228 0 0 0 0 0
+
+
 cave_entrance_inner_wall 1255 229 0 0 0 0 0
+cave_entrance_ceiling_left 1256 180 0 0 1 0 0
 cave_entrance_ceiling_left 1200 180 0 0 1 0 0
+
 extra_brick 1200 152 0 0 1 0 0
 extra_brick 1200 123 0 0 1 0 0
 icy_brick 1180 352 0 0 1 0 0
 icy_brick_left_ledge 1140 352 0 0 1 0 0
+icy_brick 1409 352 0 0 1 0 0
 
-ice_slope_down_right_1 1409 352 59 30 1 0 0
+left_wall 1639 140 0 0 1 0 0
+left_wall 1639 200 0 0 1 0 0
+left_wall 1639 260 0 0 1 0 0

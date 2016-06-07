@@ -67,6 +67,24 @@ y(0)
 		}
 		return;
 	}
+	if (type == CONTROLLER_UP || type == CONTROLLER_DOWN)
+	{
+		switch (e.cbutton.button)
+		{
+		case SDL_CONTROLLER_BUTTON_A: key = "C_A"; break;
+		case SDL_CONTROLLER_BUTTON_B: key = "C_B"; break;
+		case SDL_CONTROLLER_BUTTON_X: key = "C_X"; break;
+		case SDL_CONTROLLER_BUTTON_Y: key = "C_Y"; break;
+		case SDL_CONTROLLER_BUTTON_DPAD_UP: key = "C_UP"; break;
+		case SDL_CONTROLLER_BUTTON_DPAD_DOWN: key = "C_DOWN"; break;
+		case SDL_CONTROLLER_BUTTON_DPAD_LEFT: key = "C_LEFT"; break;
+		case SDL_CONTROLLER_BUTTON_DPAD_RIGHT: key = "C_RIGHT"; break;
+
+		default: break;
+		}
+		return;
+	}
+
 	if (type == MOUSE_BUTTONUP || type == MOUSE_BUTTONDOWN)
 	{
 		mouseButton = e.button.button;
